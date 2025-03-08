@@ -1,0 +1,41 @@
+<%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <% if user_signed_in? && current_user.avatar.attached? %>
+          <%= image_tag current_user.avatar, class: "rounded-circle", size: "40x40" %>
+          <a class="navbar-brand ms-2" href="#"><%= current_user.nickname %></a>
+        <% end %>
+      </div>
+      <div class="d-flex flex-column align-items-end">
+        <% if user_signed_in? %>
+          <%= button_to "logout", destroy_user_session_path, method: :delete, class: "btn btn-danger mb-2" %>
+          <%= link_to "escreva um novo post", new_post_path, class: "btn btn-success btn-sm" %>
+        <% else %>
+          <%= button_to "login", new_user_session_path, method: :get, class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5">
+    <h1 class="text-center mb-4">postagens</h1>
+    <% if @posts.any? %>
+      <ul class="list-group mx-auto" style="max-width: 600px;">
+        <% @posts.each do |post| %>
+          <li class="list-group-item">
+            <h5><%= post.title %></h5>
+            <p><%= truncate(post.content, length: 100) %></p>
+            <%= link_to "leia mais", post, class: "btn btn-primary btn-sm" %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="text-center">sem posts. por que não criar um?</p>
+    <% end %>
+  </main>
+</body>
+</html>
