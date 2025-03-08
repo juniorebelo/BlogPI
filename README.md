@@ -1,24 +1,21 @@
-# README
+# BLOG PI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este é um projeto de um blog para o trabalho de Projeto Integrador PI
+- ferramentas
+- ruby
+- ruby on rails
+- postgres
+- docker
+- AWS
+  
+Integrantes:
+- Ismael Silva
+- Thayna
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Funcionalidades:
+- Login/Cadastro
+- Upload de foto de perfil na AWS
+- Cadastrar um post
+- Editar um post
+- Deletar um post
