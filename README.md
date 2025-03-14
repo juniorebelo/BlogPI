@@ -11,6 +11,8 @@
 
 BLOG PI é uma plataforma simples e intuitiva para criar, gerenciar e compartilhar posts. Desenvolvida como trabalho para o Projeto Integrador (PI), nossa aplicação permite que usuários expressem suas ideias através de uma interface amigável e recursos poderosos.
 
+🌐 **Landing Page:** [https://victor-lima-dev.github.io/landing-page-PI/](https://victor-lima-dev.github.io/landing-page-PI/)
+
 ## 🚀 Tecnologias Utilizadas
 
 - **Backend:** Ruby on Rails 7.1.5
@@ -56,4 +58,3 @@ Este projeto é parte de um trabalho acadêmico e está disponível para uso edu
 ---
 
 <p align="center">© 2024 BLOG PI - Projeto Integrador</p>
- 
